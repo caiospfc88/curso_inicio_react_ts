@@ -1,5 +1,7 @@
 import "./App.css";
+import BarraFerramentas from "./components/BarraFerramentas";
 import Contador from "./components/Contador";
+import ExibirPostagens from "./components/ExibirPostagens";
 {
   /*import Counter from "./components/Counter";
 import CounterInterval from "./components/CounterInterval";*/
@@ -10,6 +12,7 @@ import FormularioLogin from "./components/FormularioLogin";
 }
 import ListaDeCompras from "./components/ListaDeCompras";
 import UseCustomHook from "./components/UseCustomHook";
+import { TemaProvider } from "./contexts/TemaContext";
 {
   /*import TextInput from "./components/TextInput";*/
 }
@@ -32,6 +35,12 @@ function App() {
       <UseCustomHook />
       {/*6 - useReducer com TS */}
       <Contador />
+      {/*7 - Context API com TS */}
+      <TemaProvider>
+        <BarraFerramentas />
+      </TemaProvider>
+      {/*8 - Requisição de APIs com Axios e TS  */}
+      <ExibirPostagens />
     </>
   );
 }
